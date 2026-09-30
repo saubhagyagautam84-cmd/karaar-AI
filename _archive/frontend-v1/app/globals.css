@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbf8f4;
+  --surface: #ffffff;
+  --foreground: #1b2a41;
+  --muted: #5b6474;
+  --line: #e7e0d6;
+  --saffron: #e8772e;
+  --saffron-soft: #fdf0e6;
+  --saffron-ink: #9a4a14;
+  --leaf: #1f7a4d;
+  --leaf-soft: #e6f3ec;
+  --danger: #c0352b;
+  --danger-soft: #fbe9e7;
+  /* charts: one series hue + two sequential ramps (validated reference palette) */
+  --series-1: #2a78d6;
+  --grid: #e7e0d6;
+  --seq-1: #cde2fb;
+  --seq-2: #9ec5f4;
+  --seq-3: #6da7ec;
+  --seq-4: #3987e5;
+  --seq-5: #256abf;
+  --seq-6: #184f95;
+  --heat-1: #fbdccb;
+  --heat-2: #f6b797;
+  --heat-3: #f08d61;
+  --heat-4: #e0612f;
+  --heat-5: #b44619;
+  --suppressed: #d9d4cc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #11161f;
+    --surface: #1a212d;
+    --foreground: #eef1f6;
+    --muted: #9aa3b2;
+    --line: #2c3544;
+    --saffron: #f08a45;
+    --saffron-soft: #33241a;
+    --saffron-ink: #f6b88a;
+    --leaf: #4cc38a;
+    --leaf-soft: #17302a;
+    --danger: #f07167;
+    --danger-soft: #3a1f1f;
+    --series-1: #3987e5;
+    --grid: #2c3544;
+    /* dark: low values recede toward the dark surface */
+    --seq-1: #1a3556;
+    --seq-2: #104281;
+    --seq-3: #1c5cab;
+    --seq-4: #2a78d6;
+    --seq-5: #5598e7;
+    --seq-6: #86b6ef;
+    --heat-1: #4a2616;
+    --heat-2: #7a3718;
+    --heat-3: #b44619;
+    --heat-4: #e0612f;
+    --heat-5: #f6a47c;
+    --suppressed: #3a4250;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-saffron: var(--saffron);
+  --color-saffron-soft: var(--saffron-soft);
+  --color-saffron-ink: var(--saffron-ink);
+  --color-leaf: var(--leaf);
+  --color-leaf-soft: var(--leaf-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-series-1: var(--series-1);
+  /* System fonts only: the demo must work with Wi-Fi off. */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Devanagari", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* The agreement card "fills in" term by term. */
+@keyframes fill-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fill-in {
+  animation: fill-in 420ms ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fill-in {
+    animation: none;
+  }
+}
+
+/* Cells hidden by k-anonymity: hatched, never colored as data. */
+.suppressed {
+  background: repeating-linear-gradient(135deg, var(--suppressed) 0 2px, transparent 2px 7px);
+}
+
+.leaflet-container {
+  background: var(--background);
+  font-family: var(--font-sans);
+}
+.leaflet-tooltip.delay-label {
+  background: var(--surface);
+  color: var(--foreground);
+  border: 1px solid var(--line);
+  box-shadow: none;
+  font-weight: 600;
+  padding: 2px 6px;
+}
+.leaflet-tooltip.delay-label::before {
+  display: none;
+}

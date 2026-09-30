@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-rubik: "Rubik Variable";
+  --font-dm-sans: "DM Sans Variable";
+}
+
+html,
+body {
+  background: #fffdf9;
+  color: #1b2a41;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-base font-semibold transition focus-visible:outline-none focus-visible:ring-4 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-navy text-cream hover:bg-navy-700 focus-visible:ring-navy/25;
+  }
+  .btn-accent {
+    @apply btn bg-saffron text-navy hover:brightness-95 focus-visible:ring-saffron/30;
+  }
+  .btn-success {
+    @apply btn bg-leaf text-white hover:brightness-110 focus-visible:ring-leaf/30;
+  }
+  .btn-ghost {
+    @apply btn border border-line bg-paper text-navy hover:bg-cream focus-visible:ring-saffron/25;
+  }
+  .card {
+    @apply rounded-2xl border border-line/70 bg-white/70 p-5 shadow-card;
+  }
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.18em] text-saffron-ink;
+  }
+  .input {
+    @apply w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-navy placeholder:text-navy-muted/70 focus:border-saffron focus:outline-none focus:ring-4 focus:ring-saffron/20;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-semibold text-navy;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold transition;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+  }
+}
+
+/* B3: Easy mode. Same palette; larger type and targets, stronger contrast, no motion. */
+html.easy {
+  font-size: 118%;
+}
+html.easy .text-navy-muted,
+html.easy .text-navy-body {
+  color: #1b2a41;
+}
+html.easy .btn {
+  min-height: 3.25rem;
+  font-size: 1.05rem;
+}
+html.easy .input {
+  min-height: 3.25rem;
+  border-width: 2px;
+}
+html.easy a:not(.btn):not(.btn-primary):not(.btn-ghost):not(.btn-accent):not(.btn-success) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+html.easy *:focus-visible {
+  outline: 3px solid #b85a18 !important;
+  outline-offset: 2px;
+}
+html.easy *,
+html.easy *::before,
+html.easy *::after {
+  animation: none !important;
+  transition: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

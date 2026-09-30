@@ -1,0 +1,7 @@
+Write a short agreement summary for a person who may have limited
+reading skills. Language: {lang}. Max 8 short lines. Use simple
+everyday words, not legal words. Show every amount as digits with
+the rupee symbol. Order: work, price, advance, dates, materials,
+conditions, then "Kuch sawaal baaki hain:" with open questions if any.
+End with: "Sahi hai to 'Haan, pakka' dabaiye." (translated to {lang}).
+Do not add anything that is not in the JSON.

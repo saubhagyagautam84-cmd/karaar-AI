@@ -1,0 +1,13 @@
+{
+  "name": "karaar-ai",
+  "private": true,
+  "description": "Karaar AI: verifiable, voice-first agreements for Bharat's informal workforce",
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "dev": "node scripts/dev.mjs",
+    "test": "node scripts/test.mjs",
+    "build": "npm --prefix frontend run build",
+    "demo:check": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/demo-check.mjs",
+    "seed": "node scripts/seed.mjs"
+  }
+}

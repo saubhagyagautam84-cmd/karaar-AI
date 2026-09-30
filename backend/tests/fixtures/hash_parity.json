@@ -1,0 +1,196 @@
+{
+  "agreement": {
+    "id": "KR-7001",
+    "createdAt": "2026-09-30T10:00:00.000Z",
+    "status": "sealed",
+    "worker": {
+      "name": "Ramesh Kumar",
+      "phone": "xxxxxx2345",
+      "lang": "hinglish",
+      "role": "worker",
+      "phoneHash": "5d0b0a4f4a1c4c6b8f0f6f0d2b6b4a7e1d3c2b1a0f9e8d7c6b5a4f3e2d1c0b9a"
+    },
+    "hirer": {
+      "name": "अनीता शर्मा",
+      "phone": "xxxxxx7890",
+      "lang": "hi",
+      "role": "hirer",
+      "phoneHash": "0f1e2d3c4b5a69788796a5b4c3d2e1f00f1e2d3c4b5a69788796a5b4c3d2e1f0"
+    },
+    "consent": {
+      "worker": true,
+      "hirer": true,
+      "at": "2026-09-30T10:00:00.000Z"
+    },
+    "audioSeconds": 44,
+    "transcript": [
+      {
+        "speaker": "hirer",
+        "text": "Do kamre aur hall, ₹18,000 — theek?",
+        "t": 0
+      },
+      {
+        "speaker": "worker",
+        "text": "Haan ji, paanch hazaar advance. 🙏",
+        "t": 6,
+        "uncertain": true
+      }
+    ],
+    "terms": {
+      "jobType": "Painting",
+      "location": "Lajpat Nagar, New Delhi",
+      "scope": [
+        {
+          "en": "Two bedrooms",
+          "hi": "दो बेडरूम"
+        },
+        {
+          "en": "Hall / living room",
+          "hi": "हॉल"
+        }
+      ],
+      "excluded": [
+        {
+          "en": "Ceilings",
+          "hi": "छत"
+        }
+      ],
+      "price": 18000,
+      "advance": 5000,
+      "advanceAdjusted": true,
+      "durationDays": 7,
+      "deadline": "2026-10-07",
+      "materialsBy": "worker",
+      "balanceWhen": "On completion",
+      "paymentMode": "UPI",
+      "milestones": [
+        {
+          "id": "m1",
+          "title": "Bedrooms done",
+          "titleHi": "बेडरूम पूरा",
+          "amount": 6500
+        },
+        {
+          "id": "m2",
+          "title": "Hall done",
+          "titleHi": "हॉल पूरा",
+          "amount": 6500
+        }
+      ]
+    },
+    "flags": [],
+    "confirmations": {
+      "worker": {
+        "at": "2026-09-30T10:05:00.000Z",
+        "channel": "ivr",
+        "reply": "हाँ, पक्का ✅",
+        "lang": "hinglish"
+      },
+      "hirer": {
+        "at": "2026-09-30T10:06:00.000Z",
+        "channel": "whatsapp",
+        "reply": "हाँ, पक्का ✅",
+        "lang": "hi"
+      }
+    },
+    "payments": [],
+    "events": [],
+    "hash": "ea4af7c89afeb0d84365748ed7680df9172d9d2ee22df37b45812745b71289c5",
+    "sealedAt": "2026-09-30T10:06:00.000Z",
+    "amendments": [
+      {
+        "id": "KR-7001-A1",
+        "createdAt": "2026-10-02T09:00:00.000Z",
+        "source": "change",
+        "description": "Balcony bhi kar do, 2000 extra, ek din aur",
+        "transcript": [
+          {
+            "speaker": "hirer",
+            "text": "Balcony bhi kar do",
+            "t": 0
+          },
+          {
+            "speaker": "worker",
+            "text": "2000 extra, ek din aur",
+            "t": 4
+          }
+        ],
+        "delta": {
+          "addScope": [
+            {
+              "en": "Balcony",
+              "hi": "बालकनी"
+            }
+          ],
+          "removeScope": [],
+          "priceChange": 2000,
+          "extraDays": 1,
+          "note": "Balcony bhi kar do 2000 extra, ek din aur",
+          "addMilestones": [
+            {
+              "id": "c1",
+              "title": "Balcony (change)",
+              "titleHi": "बालकनी (बदलाव)",
+              "amount": 2000
+            }
+          ]
+        },
+        "parentHash": "ea4af7c89afeb0d84365748ed7680df9172d9d2ee22df37b45812745b71289c5",
+        "confirmations": {
+          "worker": {
+            "at": "2026-10-02T09:01:00.000Z",
+            "channel": "in_app",
+            "reply": "Haan, pakka ✅",
+            "lang": "hinglish"
+          },
+          "hirer": {
+            "at": "2026-10-02T09:02:00.000Z",
+            "channel": "whatsapp",
+            "reply": "हाँ, पक्का ✅",
+            "lang": "hi"
+          }
+        },
+        "sealedAt": "2026-10-02T09:02:00.000Z",
+        "hash": "4ed8c84f0967327c7c211ee46f406b09ff1abd2eae1255a8a0a44728d7d28a1f"
+      },
+      {
+        "id": "KR-7001-S1",
+        "createdAt": "2026-10-09T12:00:00.000Z",
+        "source": "settlement",
+        "description": "Pay ₹12,150 now. Hold ₹1,350 until the worker fixes the issue within 7 days, then pay it.",
+        "transcript": [],
+        "delta": {
+          "addScope": [],
+          "removeScope": [],
+          "priceChange": 0,
+          "extraDays": 0,
+          "note": "Pay ₹12,150 to the worker now"
+        },
+        "parentHash": "4ed8c84f0967327c7c211ee46f406b09ff1abd2eae1255a8a0a44728d7d28a1f",
+        "confirmations": {
+          "worker": {
+            "at": "2026-10-09T12:01:00.000Z",
+            "channel": "in_app",
+            "reply": "Haan, pakka ✅",
+            "lang": "hinglish"
+          },
+          "hirer": {
+            "at": "2026-10-09T12:02:00.000Z",
+            "channel": "in_app",
+            "reply": "हाँ, पक्का ✅",
+            "lang": "hi"
+          }
+        },
+        "sealedAt": "2026-10-09T12:02:00.000Z",
+        "hash": "50cf00bf2e7e8c9f23d2c156129d15ac72f1c89c0e1be11c540de75bbefd4058"
+      }
+    ]
+  },
+  "expected": {
+    "agreement": "ea4af7c89afeb0d84365748ed7680df9172d9d2ee22df37b45812745b71289c5",
+    "amendments": [
+      "4ed8c84f0967327c7c211ee46f406b09ff1abd2eae1255a8a0a44728d7d28a1f",
+      "50cf00bf2e7e8c9f23d2c156129d15ac72f1c89c0e1be11c540de75bbefd4058"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Karaar AI",
+  "short_name": "Karaar",
+  "description": "Bolo. Pakka Karo. Voice-first, verifiable agreements.",
+  "start_url": "/new",
+  "display": "standalone",
+  "background_color": "#FFFDF9",
+  "theme_color": "#E8762B",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
